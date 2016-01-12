@@ -1,0 +1,83 @@
+#upload {
+    font-family: arial,Helvertical;
+    color:#AAA;
+}
+ #area {
+      border: 4px dashed #DDD;
+      height: 200px;
+      text-align: center;
+      font-size: 13px;
+    }
+    p{
+        margin: 0;
+        padding: 60px 0 0 0;
+        font-weight: bold;
+        font-size: 20px;
+
+
+    }
+    span{
+        display: block;margin-bottom: 5px;
+        
+    }
+    #parcourir{
+      border: 1px solid #BBB;
+      text-decoration: none;
+      padding: 3px 8px;
+       color: #454546;
+      border-radius:15px;
+
+    }  
+    #filelist{
+        margin-top: 10px;
+    }
+        .file{
+            padding: 0 10px;
+            border:1px solid #DFDFDF;
+            height: 70px;
+            line-height: 70px;
+            margin-bottom: 10px;
+            position: relative;
+
+        }
+         .progressbar{
+            position: absolute;
+            top: 25px;right: 15px;
+            width: 150px;height: 20px;
+            background-color: #abb2bc;
+             border-radius:15px;
+             box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.5);
+         }
+.resultat{
+  width: 400px;
+  height: 30px;
+  
+  display: block;
+  position: relative;
+  padding-top: 10px;
+}
+.cible{
+  width: 100px;
+  background-color: #BBB;
+  text-align: center;
+  position: absolute;
+  right: 300px;
+  border-radius:30px;
+
+}
+.source{
+  width: 100px;
+  background-color: #BBB;
+  text-align: center;
+  position: absolute;
+  right: 400px;
+  border-radius:30px;
+}
+.total{
+  width: 300px;
+  background-color: #BBB;
+  text-align: center;
+  position: absolute;
+  
+  border-radius:30px;
+}

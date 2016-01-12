@@ -1,0 +1,18 @@
+fresh_user:
+    resource: "@FreshUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+fresh_api_test:
+    resource: "@FreshApiTestBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+test_rest:
+    resource: "@TestRestBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

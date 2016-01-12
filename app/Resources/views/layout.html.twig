@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>
+            {% block title %} 
+            CLONE LEBONCOIN.FR
+            {% endblock %} 
+        </title>
+        {# on declare dans ce bloc les links vers nos feuilles de styles#}
+        {% block stylesheets %}
+          <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}" />
+          <link rel="stylesheet"  href="{{asset('css/style.css')}}" />
+         
+
+        {% endblock %}
+      
+    </head>
+
+<body>
+    <div class="container"> {# debut div container#}
+      <header class="row">
+         <div class="col-lg-3">
+          <img class="logo" src="{{asset('img/logo.png')}}" align="left"></img>
+         </div>
+         <div class ="col-lg-3">
+            <p>ANNONCES  <br>CHAMPAGNE-ARDENNE</p>
+          </div> 
+         <div class="col-lg-6" align="right" id="conn">
+            EMAIL:<input type="text">
+             Password:<input type="text">
+         </div>
+      </header>
+      
+      <div class="navigation">
+        <nav class="row"> {# debut div nav#}
+          <ul id="menu">
+          <li><a href="{{ path("keny_leboncoin_accueil") }}">ACCUEIL</a></li>
+          <li><a href="{{ path("keny_leboncoin_annonce") }}">DEPOSER UNE ANNONCE</a></li>
+          <li><a href="{{ path("keny_leboncoin_offre") }}">OFFRES</a></li>
+          <li><a href="{{ path("keny_leboncoin_demande") }}">DEMANDES</a></li>
+          <li><a href="#">MES ANNONCES</a></li>
+          <li><a href="#">BOUTIQUES</a></li>
+          <li><a href="#">MON COMPTE</a></li>
+          <li><a href="#">AIDE</a></li>       
+          </ul>
+        </nav> 
+      </div>
+      
+        
+        <div class="row">
+          <div class="recherche" >
+            {% block recherche %}
+             
+            {%endblock%}          
+          </div>
+        </div> 
+
+        <div class="row" >
+        {% block leftright %} 
+
+        {% endblock %}
+        </div>
+       
+
+        <div class="row" >
+          {% block nextleftright %} 
+         
+          {% endblock %}
+        </div>
+        
+
+        <div class="row" > 
+
+          <div class="annonce">
+            <section class="col-lg-9">
+            
+              {% block section %}
+
+               {% endblock %}
+            </section>
+            <div class="col-lg-3" id="section-right">
+              {% block ala_une %}
+            
+              {% endblock %}
+          </div>
+          </div>
+
+          
+
+    </div> {# fin div container#}
+
+
+</body>
+
+</html>

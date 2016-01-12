@@ -1,0 +1,90 @@
+{# on herite du layout dans ressources view #}
+{%extends "LeboncoinBundle::layout.html.twig"%} 
+{% block recherche %}
+<form >
+              Recherche:<input type ="text">
+              <select>
+                <option>CHAMPAGNE-ARDENNE</option>
+                <option>ILE DE FRANCE</option>
+                <option>Bourgogne</option>
+              </select>
+              <select>
+                <option>Marne</option>
+                <option>Ardennes</option>
+                <option>Aube</option>
+                <option>Haute-Marne</option>
+              </select>
+              <input type ="text" placeholder="Villes ou Codes Postaux">
+              <br><br>
+                <input type="checkbox">
+                 <a href="#">Recherche dans le titre uniquement</a> 
+              <br> <br>
+              <div align ="right" >
+                 <input type="checkbox">
+                 <a href="#">Annonces * Urgente uniquement</a> 
+                  <input type="submit" value="CHERCHER">
+              </div>
+            </form>   
+{% endblock %}
+
+{% block leftright %}
+          <div class="gauche" ><a href="#" class="col-lg-6" >Recherchedans le titre uniquement</a> </div>
+          <div class="droite" ><a href="#" class="col-lg-6">Recherchedans le titre uniquement</a>  </div>
+{% endblock %}
+
+
+{% block section %}
+<form action="{{ path('keny_leboncoin_offre') }}" method="post" align="center">
+
+{# on cree une boucle pour lister les offres #}
+{% for offre in offer %}
+
+ 
+ <table>
+
+   <tr>
+
+   <td>  {{ offre.date|date()}} </td> 
+   <td> <img src="{{ asset('uploads/jobs/'~offre.logo ) }} "></td>
+   <td> <h2>{{ offre.titre }}</h2> <br> {{ offre.description }} <br> <h5>{{ offre.region }} / {{ offre.dep }}</h5> <h3>{{ offre.prix }}$ <h/3> </td>
+
+   </tr>
+
+ </table>
+ 
+ {#
+ <div class="getoffer">
+ <div class="o1">{{ offre.date|date('Y\\\m\\\d') }}</div>    {% offre.date|date() %}
+ <div class="o2"><img src="{{ asset('uploads/jobs/'~offre.logo ) }} "></div>
+ <div class="o3">{{ offre.titre }}</div>
+
+ </div>
+ #}
+{% endfor %}
+{% endblock %}
+
+{% block ala_une %}
+ <h3 color="blue"><img  src="{{asset('img/annonce_une.JPG')}}" align="center"></img></h3>
+  <form action="{{ path('keny_leboncoin_offre') }}" method="post" align="center">
+
+   {# on cree une boucle pour lister les offres #}
+  {% for offre in offer %}
+
+ 
+     <table>
+      <tr align="center">
+        <td align="center"> <img src="{{ asset('uploads/jobs/'~offre.logo ) }} " align="center"> </td>
+      </tr>
+      <tr align="center">
+       <td bgcolor="white" align="center"> {{ offre.titre }} </td>
+       </tr>
+       <tr align="center">
+          <td align="center"> {{ offre.prix}}$ </td> 
+       </tr>
+
+    </table>
+ 
+  {% endfor %}
+
+  </form>
+{% endblock %}

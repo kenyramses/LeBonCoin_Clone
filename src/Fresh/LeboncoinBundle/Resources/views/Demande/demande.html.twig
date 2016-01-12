@@ -1,0 +1,42 @@
+{# on herite du layout dans ressources view #}
+{%extends "LeboncoinBundle::layout.html.twig"%} 
+{% block recherche %}
+<form >
+              Recherche:<input type ="text">
+              <select>
+                 <option>CHAMPAGNE-ARDENNE</option>
+                <option>ILE DE FRANCE</option>
+                <option>Bourgogne</option>
+              </select>
+              <select>
+               <option>Marne</option>
+                <option>Ardennes</option>
+                <option>Aube</option>
+                <option>Haute-Marne</option>
+              </select>
+              <input type ="text" placeholder="Villes ou Codes Postaux">
+              <br><br>
+                <input type="checkbox">
+                 <a href="#">Recherche dans le titre uniquement</a> 
+              <br> <br>
+              <div align ="right" >
+                 <input type="checkbox">
+                 <a href="#">Annonces * Urgente uniquement</a> 
+                  <input type="submit" value="CHERCHER">
+              </div>
+            </form>   
+{% endblock %}
+
+{% block leftright %}
+          <div class="gauche" ><a href="#" class="col-lg-6" >Recherchedans le titre uniquement</a> </div>
+          <div class="droite" ><a href="#" class="col-lg-6">Recherchedans le titre uniquement</a>  </div>
+{% endblock %}
+
+
+{% block section %}
+          
+          {% endblock %}
+
+{% block ala_une %}
+<marquee><h2>LISTE DE NOS OFFRES </h2></marquee>
+{% endblock %}

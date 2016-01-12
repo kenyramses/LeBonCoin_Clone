@@ -1,0 +1,67 @@
+
+html{
+background-color: white;
+background-image:  url(img/dollar.png);
+background-size: 100%  100%;
+
+}
+body {
+        border-radius: 20px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color: #bce3ff;
+	background-image: none;
+	width: 70%;
+        height: 100%;
+	margin: 30px auto 0;
+}
+h3{
+margin: 50px 10px 10px -200px;
+
+}
+
+#carrousel{
+margin: -7.5% 90px 20px 180px;
+border-radius: 25px;
+padding:  50px;
+
+}
+
+
+#header{
+
+height: 90px;
+/*background: #f1b12b;*/
+}
+
+li img{
+border-radius: 15px;
+max-width: 100%;
+}
+ li {
+    list-style: none;
+}
+#currency-selector{
+   margin: 7% 0px 20px 340px; 
+} 
+		
+.resultat{
+  margin: 4% 0px 20px 340px; 
+}	
+.logo{
+    padding: 10px;
+    /*margin-right: 10px;*/
+}
+ 
+
+
+
+		
+
+
+
+
+
+
+
+
+

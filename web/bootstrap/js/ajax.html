@@ -1,0 +1,74 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <link rel="stylesheet" href="ajax.css">
+</head>
+<body>
+<div id="container">
+ 
+ 
+ 
+ 
+		<form  method="post"  name="form"  action="join.php">
+ 
+			<div class="info">
+				<span class="error" style="display:none"><h2>DONN&Eacute;ES INVALIDE</h2></span>
+				<span  class="success" style="display:none"><h2>ENREGISTREMENT FAIT</h2></span>
+			</div>
+ 
+			<div class="formLayout">
+			<table cellpadding="2" cellspacing="2" border="0">
+			<!-- INPUTS -->
+			<tr>
+				<td valign="top"><label>Nom</label></td>
+				<td valign="top"><input id="nom" name="nom" type="text" maxlength="255" tabindex="1" size="60"/></td>
+			</tr>
+ 
+			<tr>
+				<td valign="top"><label>Pr&eacute;nom</label></td>
+				<td valign="top"><input id="prenom" name="prenom" type="text" maxlength="255" tabindex="1" size="60"/></td>
+			</tr>
+ 
+			<tr>
+				<td valign="top"><label>Adresse</label></td>
+				<td valign="top"><textarea rows="4" cols="50" name="adresse" id="adresse"></textarea></td>
+			</tr>
+ 
+			<tr>
+				<td valign="top"><label>Ville</label></td>
+				<td valign="top"><input id="ville" name="ville" type="text" maxlength="255" tabindex="1" size="60"/></td>
+			</tr>
+ 
+			<tr>
+				<td valign="top"><label>Code postal</label></td>
+				<td valign="top"><input id="zip" name="zip" type="text" maxlength="255" tabindex="1" size="20"/></td>
+			</tr>
+ 
+			<tr>
+				<td valign="top"><label>T&eacute;l&eacute;phone</label></td>
+				<td valign="top"><input id="telephone" name="telephone" type="text" maxlength="255" tabindex="1" size="20"/></td>
+			</tr>
+ 
+			<tr>
+				<td valign="top"><label>Email</label></td>
+				<td valign="top"><input id="email" name="email" type="text" maxlength="255" tabindex="1" size="60"/></td>
+			</tr>
+ 
+			<!-- BTN -->
+			<tr>
+				<td>&nbsp;</td>
+				<td valign="top">
+			<input  type="submit" value="ENVOYER" class="submit"/>
+				</td>
+			</tr>
+			</table>
+			</div>
+ 
+		</form>
+ 
+ 
+			</div><!--container-->
+			<script src="jquery.js"></script>
+			<script src="ajax.js"></script>
+			</body>
+			</html>

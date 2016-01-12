@@ -1,0 +1,23 @@
+leboncoin:
+    resource: "@LeboncoinBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+fresh_user:
+    resource: "@FreshUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+test_rest:
+    resource: "@TestRestBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+#    resource: "@AppBundle/Controller/"
+#    type:     annotation
+    resource: "@LeboncoinBundle/Resources/config/routing.yml"
+
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

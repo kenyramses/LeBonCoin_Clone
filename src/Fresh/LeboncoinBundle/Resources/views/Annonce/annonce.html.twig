@@ -1,0 +1,58 @@
+{# on herite du layout dans ressources view #}
+{%extends "LeboncoinBundle::layout.html.twig"%} 
+
+{% block section %}
+          
+             
+              {#formulaire de creation d'une annonce#}
+              <form action="{{ path('keny_leboncoin_annonce') }}" method="post" align="center">
+               <fieldset class="scheduler-border"> 
+                 <legend class="scheduler-border"> <img class="logoaccueil" src="{{asset('img/cathegorie.JPG')}}" align="center"></img> </legend>
+
+                   {{ form_label(formcat.nomCathegorie) }} {{ form_widget(formcat.nomCathegorie) }}<br>
+                    {{ form_label(form.typeannonce) }} {{ form_widget(form.typeannonce) }}
+               </fieldset>
+
+               <fieldset class="scheduler-border"> 
+               <legend class="scheduler-border"><img class="logoaccueil" src="{{asset('img/localisation.JPG')}}" align="center"></img> </legend>
+
+                   {{ form_label(form.region) }} {{ form_widget(form.region) }}
+                   {{ form_label(form.dep) }} {{ form_widget(form.dep) }}
+               </fieldset>
+
+               <fieldset class="scheduler-border">
+                  <legend class="scheduler-border"><img class="logoaccueil" src="{{asset('img/info.JPG')}}" align="center"></img> </legend>
+                  {{ form_label(formpusher.pseudo) }} {{ form_widget(formpusher.pseudo) }}
+                   {{ form_label(formpusher.email) }} {{ form_widget(formpusher.email) }}
+                    {{ form_label(formpusher.telephone) }} {{ form_widget(formpusher.telephone) }}
+                   
+               </fieldset>
+               
+
+              <fieldset class="scheduler-border"> 
+               <legend class="scheduler-border"><img class="logoaccueil" src="{{asset('img/annonce.JPG')}}" align="center"></img> </legend>
+              {# {{ form_label(form.date) }} {{ form_widget(form.date) }} #}
+               {{ form_label(form.titre) }} {{ form_widget(form.titre) }}
+               {{ form_label(form.description) }} {{ form_widget(form.description) }}
+               {{ form_label(form.prix) }} {{ form_widget(form.prix) }}
+
+                  {{ form_label(form.logo) }} {{ form_widget(form.logo) }}
+
+                  {{ form_label(form.url) }} {{ form_widget(form.url) }}
+
+
+
+</fieldset>
+
+
+                <fieldset class="scheduler-border"> 
+               <legend class="scheduler-border"></legend>
+                   <input type="submit" value="VALIDER" align="center" id="sub">
+               </fieldset>
+               
+
+
+              <form>
+
+
+{% endblock %}
